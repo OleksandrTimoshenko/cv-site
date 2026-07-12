@@ -42,7 +42,7 @@
       "role": "DevOps Engineer",
       "company": "Umber",
       "tag": "Fintech",
-      "period": "Jan 2026 — Present",
+      "period": "March 2026 — Present",
       "status": "active",
       "log": [
         "Built reusable Terraform/OpenTofu IaC modules that cut new template-project setup time from a full working day down to 1–2 hours",
