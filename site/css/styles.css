@@ -285,6 +285,10 @@ a:hover { text-decoration: underline; }
   color: var(--green);
 }
 
+.unit__status--exited {
+  color: var(--text-faint);
+}
+
 .unit__meta {
   color: var(--text-faint);
   font-size: 12px;

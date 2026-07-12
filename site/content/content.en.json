@@ -4,7 +4,7 @@
     "role": "DevOps Engineer (Linux)",
     "typedLines": [
       "whoami",
-      "oleksandr-tymoshenko — devops / ci-cd / blockchain infra",
+      "oleksandr-tymoshenko — devops / ci-cd / fintech & blockchain infra",
       "systemctl status career.service"
     ]
   },
@@ -13,7 +13,7 @@
   },
   "summary": {
     "unit": "summary.service",
-    "text": "DevOps and CI/CD engineer with hands-on experience in e-commerce and blockchain infrastructure. Specialized in deploying, configuring, and maintaining high-load production environments. Proven ability to design CI/CD pipelines and monitoring systems that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering scalable, fault-tolerant solutions that support business growth, operational stability, and fast product delivery."
+    "text": "DevOps and CI/CD engineer with hands-on experience in fintech, e-commerce, and blockchain infrastructure. Specialized in deploying, configuring, and maintaining high-load production environments. Proven ability to design CI/CD pipelines and monitoring systems that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering scalable, fault-tolerant solutions that support business growth, operational stability, and fast product delivery."
   },
   "contacts": {
     "unit": "contacts.service",
@@ -38,6 +38,21 @@
     ]
   },
   "experience": [
+    {
+      "role": "DevOps Engineer",
+      "company": "Umber",
+      "tag": "Fintech",
+      "period": "Jan 2026 — Present",
+      "status": "active",
+      "log": [
+        "Built reusable Terraform/OpenTofu IaC modules that cut new template-project setup time from a full working day down to 1–2 hours",
+        "Designed and maintain the company VPN for secure access to internal resources and servers (Tailscale + self-hosted Headscale)",
+        "Support an AWS account spanning 20+ projects",
+        "Designed modern infrastructure for new projects: ECS on EC2 with service and instance autoscaling, inter-service communication via AWS Cloud Map",
+        "Migrated backend microservices from Fargate to ECS on EC2 for cost optimization, and frontend microservices from Fargate to Cloudflare + S3",
+        "Set up PostgreSQL data replication with Debezium and self-hosted GitHub Actions runners for CI"
+      ]
+    },
     {
       "role": "Blockchain DevOps Engineer",
       "company": "Everstake",

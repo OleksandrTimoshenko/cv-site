@@ -161,12 +161,19 @@
     listEl.innerHTML = '';
     data.experience.forEach((job) => {
       const unit = el('div', { class: 'unit' });
+      const isActive = job.status === 'active';
 
       const head = el('div', { class: 'unit__head' });
       const name = el('span', { class: 'unit__name' });
-      name.appendChild(el('span', { class: 'dot' }));
-      name.appendChild(document.createTextNode(' ' + job.company.toLowerCase().replace(/\s+/g, '-') + '.service'));
-      const status = el('span', { class: 'unit__status', text: '● active (exited)' });
+      const dot = el('span', { class: 'dot' });
+      if (isActive) dot.classList.add('dot--pulse');
+      name.appendChild(dot);
+      const unitSlug = job.company.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      name.appendChild(document.createTextNode(' ' + unitSlug + '.service'));
+      const status = el('span', {
+        class: isActive ? 'unit__status' : 'unit__status unit__status--exited',
+        text: isActive ? '● active (running)' : '● active (exited)'
+      });
       head.appendChild(name);
       head.appendChild(status);
       unit.appendChild(head);
@@ -176,7 +183,8 @@
       const row = el('div', { class: 'exp__row' });
       const roleWrap = el('span');
       roleWrap.appendChild(el('span', { class: 'exp__role', text: job.role + ' ' }));
-      roleWrap.appendChild(el('span', { class: 'exp__company', text: '@ ' + job.company }));
+      const companyLabel = job.tag ? `${job.company} (${job.tag})` : job.company;
+      roleWrap.appendChild(el('span', { class: 'exp__company', text: '@ ' + companyLabel }));
       row.appendChild(roleWrap);
       row.appendChild(el('span', { class: 'exp__period mono', text: job.period }));
       exp.appendChild(row);
