@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "name": "Олександр Тимошенко",
+    "role": "DevOps інженер (Linux)",
+    "typedLines": [
+      "whoami",
+      "oleksandr-tymoshenko — devops / ci-cd / blockchain infra",
+      "systemctl status career.service"
+    ]
+  },
+  "nav": {
+    "sections": ["Про мене", "Досвід", "Навички", "Освіта", "Контакти"]
+  },
+  "summary": {
+    "unit": "summary.service",
+    "text": "DevOps та CI/CD інженер з практичним досвідом в e-commerce та блокчейн-інфраструктурі. Спеціалізуюсь на розгортанні, конфігуруванні та підтримці high-load продакшн-середовищ. Маю підтверджену здатність проєктувати CI/CD пайплайни та системи моніторингу, що підвищують ефективність розробки, якість коду та надійність інфраструктури. Фокусуюсь на масштабованих, відмовостійких рішеннях, що підтримують зростання бізнесу, операційну стабільність та швидку доставку продукту."
+  },
+  "contacts": {
+    "unit": "contacts.service",
+    "email_b64": "by5zLnR5bW9zaGVua28xOTk5QGdtYWlsLmNvbQ==",
+    "phone_b64": "KzM4IDA5OCA2MjQgOTQgMjU=",
+    "linkedin": "https://linkedin.com/in/oleksandr-tymoshenko-devops",
+    "github": "https://github.com/OleksandrTimoshenko",
+    "salesforce": "https://www.salesforce.com/trailblazer/otymoshenko"
+  },
+  "education": {
+    "unit": "education.service",
+    "university": "Національний університет «Львівська політехніка»",
+    "period": "2016–2022",
+    "degrees": [
+      { "level": "Бакалавр", "field": "Кібербезпека" },
+      { "level": "Магістр", "field": "Автоматизація та комп'ютерні технології" }
+    ],
+    "additional": [
+      "DevOps crash courses",
+      "Udemy — Python programming",
+      "Salesforce Associate certification"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Blockchain DevOps Engineer",
+      "company": "Everstake",
+      "period": "вер 2024 — січ 2026",
+      "status": "exited",
+      "log": [
+        "Експлуатація та оптимізація high-load blockchain RPC-нод (Solana RPC, OP stack, Cosmos-like)",
+        "Знизив вартість RPC-кластера на 65% через оптимізацію інфраструктури, розподіл трафіку та коректний підбір ресурсів зі збереженням високої доступності"
+      ]
+    },
+    {
+      "role": "CI/CD Engineer",
+      "company": "Astound Digital",
+      "period": "черв 2022 — сер 2024",
+      "status": "exited",
+      "log": [
+        "Адмініструвння AWS-акаунту великого enterprise-проєкту (20+ сервісів) із фокусом на доступність, безпеку та оптимізацію витрат",
+        "Мігрував частину проєкту з Heroku на AWS; перепроєктував інфраструктуру та оптимізував конфігурацію БД — зниження витрат на 40%",
+        "Оптимізував CI/CD пайплайни: зниження часу виконання на 10–50%, зменшення частки failed-білдів на 40%",
+        "Збільшив частоту деплоїв з 1–2/тиждень до 3–5/день, дозволивши розробникам оновлювати змінні напряму через CircleCI без ручних оновлень Terraform"
+      ]
+    },
+    {
+      "role": "DevOps Engineer",
+      "company": "Teamvoy",
+      "period": "вер 2020 — черв 2022",
+      "status": "exited",
+      "log": [
+        "Впровадив DevOps-культуру на рівні компанії, покращивши співпрацю команд та швидкість доставки",
+        "Оцінював, обирав і впроваджував AI-інструменти на рівні компанії для підсилення автоматизації та прийняття рішень"
+      ]
+    }
+  ],
+  "skills": {
+    "unit": "skills.service",
+    "hard": [
+      "Linux-системи",
+      "AWS Cloud (20+ сервісів, адміністрування акаунтів)",
+      "CI/CD: Jenkins, CircleCI, GitLab CI, GitHub CI",
+      "IaC: Terraform, Ansible",
+      "Контейнери: Docker, K8s/K3s, Vagrant",
+      "Моніторинг: Zabbix, CloudWatch, Prometheus & Grafana, EFK stack, NewRelic",
+      "Blockchain RPC-ноди: Solana, OP stack, Cosmos-like",
+      "Стеки застосунків: Django, Node.js, Ruby on Rails, Magento 2",
+      "Jenkins pipelines та Groovy-бібліотеки",
+      "HAProxy, Nginx, балансування навантаження",
+      "SonarQube, SFDX code analyzer",
+      "Планування потужностей та тюнінг продуктивності (CPU/RAM/LVM/RAID)",
+      "Навантажувальне тестування: WebPageTest, Chainbench",
+      "Автоматизація на Python та Bash",
+      "PostgreSQL, MySQL/MariaDB, MongoDB",
+      "Redis, AWS ElastiCache",
+      "Let's Encrypt / Certbot",
+      "Деплой ML-моделей, інтеграція OpenAI API",
+      "CI/CD пайплайни для Salesforce"
+    ],
+    "soft": [
+      "Ефективна комунікація з технічними та нетехнічними стейкхолдерами",
+      "Командне лідерство та культура співпраці",
+      "Відповідальність за результат",
+      "Структурований пошук першопричин проблем",
+      "Постійне навчання",
+      "Стратегічна креативність — практична реалізація понад теорію"
+    ]
+  },
+  "languages": [
+    { "name": "Англійська", "level": "B2 — Upper-Intermediate" },
+    { "name": "Українська", "level": "Рідна" }
+  ],
+  "hobbies": ["Linux ентузіаст", "Пауерліфтинг"],
+  "footer": {
+    "uptimeLabel": "career.uptime",
+    "since": 2020,
+    "builtWith": "Зроблено на Terraform, S3 + CloudFront, без бекенда."
+  }
+}

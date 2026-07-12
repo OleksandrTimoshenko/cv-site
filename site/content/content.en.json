@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "name": "Oleksandr Tymoshenko",
+    "role": "DevOps Engineer (Linux)",
+    "typedLines": [
+      "whoami",
+      "oleksandr-tymoshenko — devops / ci-cd / blockchain infra",
+      "systemctl status career.service"
+    ]
+  },
+  "nav": {
+    "sections": ["Summary", "Experience", "Skills", "Education", "Contacts"]
+  },
+  "summary": {
+    "unit": "summary.service",
+    "text": "DevOps and CI/CD engineer with hands-on experience in e-commerce and blockchain infrastructure. Specialized in deploying, configuring, and maintaining high-load production environments. Proven ability to design CI/CD pipelines and monitoring systems that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering scalable, fault-tolerant solutions that support business growth, operational stability, and fast product delivery."
+  },
+  "contacts": {
+    "unit": "contacts.service",
+    "email_b64": "by5zLnR5bW9zaGVua28xOTk5QGdtYWlsLmNvbQ==",
+    "phone_b64": "KzM4IDA5OCA2MjQgOTQgMjU=",
+    "linkedin": "https://linkedin.com/in/oleksandr-tymoshenko-devops",
+    "github": "https://github.com/OleksandrTimoshenko",
+    "salesforce": "https://www.salesforce.com/trailblazer/otymoshenko"
+  },
+  "education": {
+    "unit": "education.service",
+    "university": "Lviv Polytechnic National University",
+    "period": "2016–2022",
+    "degrees": [
+      { "level": "Bachelor's", "field": "Cybersecurity" },
+      { "level": "Master's", "field": "Automation and Computer Technologies" }
+    ],
+    "additional": [
+      "DevOps crash courses",
+      "Udemy — Python programming",
+      "Salesforce Associate certification"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Blockchain DevOps Engineer",
+      "company": "Everstake",
+      "period": "Sep 2024 — Jan 2026",
+      "status": "exited",
+      "log": [
+        "Operated and optimized high-load blockchain RPC nodes (Solana RPC, OP stack, Cosmos-like)",
+        "Reduced RPC cluster costs by 65% through infrastructure optimization, traffic distribution, and proper resource sizing while maintaining high availability"
+      ]
+    },
+    {
+      "role": "CI/CD Engineer",
+      "company": "Astound Digital",
+      "period": "Jun 2022 — Aug 2024",
+      "status": "exited",
+      "log": [
+        "Administered the AWS account of a large enterprise project (20+ services), maintaining high availability, security, and cost optimization",
+        "Migrated part of the project from Heroku to AWS; redesigned infrastructure and optimized database configuration for a 40% cost reduction",
+        "Optimized CI/CD pipelines: 10–50% reduction in execution time, 40% decrease in failure rate",
+        "Increased deployment frequency from 1–2/week to 3–5/day by letting developers update variables directly through CircleCI, removing manual Terraform dependency"
+      ]
+    },
+    {
+      "role": "DevOps Engineer",
+      "company": "Teamvoy",
+      "period": "Sep 2020 — Jun 2022",
+      "status": "exited",
+      "log": [
+        "Drove company-wide DevOps integration and culture, improving collaboration and accelerating delivery times",
+        "Evaluated, selected, and deployed AI tooling at the company level to enhance automation and decision-making"
+      ]
+    }
+  ],
+  "skills": {
+    "unit": "skills.service",
+    "hard": [
+      "Linux systems",
+      "AWS Cloud (20+ services, account administration)",
+      "CI/CD: Jenkins, CircleCI, GitLab CI, GitHub CI",
+      "IaC: Terraform, Ansible",
+      "Containers: Docker, K8s/K3s, Vagrant",
+      "Monitoring: Zabbix, CloudWatch, Prometheus & Grafana, EFK stack, NewRelic",
+      "Blockchain RPC nodes: Solana, OP stack, Cosmos-like",
+      "App stacks: Django, Node.js, Ruby on Rails, Magento 2",
+      "Jenkins pipelines & Groovy libraries",
+      "HAProxy, Nginx, load balancing",
+      "SonarQube, SFDX code analyzer",
+      "Capacity planning & performance tuning (CPU/RAM/LVM/RAID)",
+      "Load testing: WebPageTest, Chainbench",
+      "Python & Bash automation",
+      "PostgreSQL, MySQL/MariaDB, MongoDB",
+      "Redis, AWS ElastiCache",
+      "Let's Encrypt / Certbot",
+      "ML model deployment, OpenAI API integration",
+      "Salesforce CI/CD pipelines"
+    ],
+    "soft": [
+      "Effective communication with technical and non-technical stakeholders",
+      "Collaborative leadership and team culture",
+      "Ownership and accountability for delivery",
+      "Structured, root-cause problem-solving",
+      "Continuous learning",
+      "Strategic creativity — execution over theory"
+    ]
+  },
+  "languages": [
+    { "name": "English", "level": "B2 — Upper-Intermediate" },
+    { "name": "Ukrainian", "level": "Native" }
+  ],
+  "hobbies": ["Linux enthusiast", "Powerlifting"],
+  "footer": {
+    "uptimeLabel": "career.uptime",
+    "since": 2020,
+    "builtWith": "Built with Terraform, S3 + CloudFront, and zero backend."
+  }
+}

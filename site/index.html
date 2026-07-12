@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oleksandr Tymoshenko — DevOps Engineer</title>
+<meta name="description" content="Oleksandr Tymoshenko — DevOps / CI-CD / Blockchain infrastructure engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="statusbar__inner">
+    <div class="statusbar__brand">
+      <span class="dot dot--pulse" aria-hidden="true"></span>
+      <span id="brandText">oleksandr@career:~$</span>
+    </div>
+    <div class="statusbar__controls">
+      <button class="flagbtn" id="langToggle" type="button" aria-label="Switch language">--lang=<span id="langValue">en</span></button>
+      <button class="flagbtn" id="themeToggle" type="button" aria-label="Switch theme">--theme=<span id="themeValue">dark</span></button>
+    </div>
+  </div>
+</div>
+
+<main class="shell">
+
+  <section class="hero">
+    <div class="terminal">
+      <div class="terminal__bar">
+        <span style="background:var(--red)"></span>
+        <span style="background:var(--amber)"></span>
+        <span style="background:var(--green)"></span>
+      </div>
+      <div class="terminal__body" id="typedBody" aria-live="polite"></div>
+    </div>
+    <div class="hero__identity">
+      <h1 class="hero__name" id="heroName">Oleksandr Tymoshenko</h1>
+      <p class="hero__role" id="heroRole">DevOps Engineer (Linux)</p>
+    </div>
+  </section>
+
+  <section class="section" id="summary-section">
+    <p class="section__eyebrow" id="summaryUnitLabel">summary.service</p>
+    <div class="unit">
+      <div class="unit__head">
+        <span class="unit__name"><span class="dot" aria-hidden="true"></span> <span id="summaryUnitName">summary.service</span></span>
+        <span class="unit__status" id="summaryStatus">● active (loaded)</span>
+      </div>
+      <div class="unit__body">
+        <p class="summary__text" id="summaryText"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience-section">
+    <h2 class="section__title" id="experienceTitle">Experience</h2>
+    <div id="experienceList"></div>
+  </section>
+
+  <section class="section" id="skills-section">
+    <h2 class="section__title" id="skillsTitle">Skills</h2>
+    <div class="unit">
+      <div class="unit__head">
+        <span class="unit__name"><span class="dot" aria-hidden="true"></span> <span id="skillsUnitName">skills.service</span></span>
+        <span class="unit__status" id="skillsStatus">● active (loaded)</span>
+      </div>
+      <div class="unit__body">
+        <p class="skills__subhead" id="hardSkillsLabel">hard skills</p>
+        <div class="pillgrid" id="hardSkillsGrid"></div>
+        <p class="skills__subhead" id="softSkillsLabel">soft skills</p>
+        <ul class="softlist" id="softSkillsList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education-section">
+    <h2 class="section__title" id="educationTitle">Education</h2>
+    <div class="unit">
+      <div class="unit__head">
+        <span class="unit__name"><span class="dot" aria-hidden="true"></span> <span id="educationUnitName">education.service</span></span>
+        <span class="unit__status" id="educationStatus">● active (loaded)</span>
+      </div>
+      <div class="unit__body">
+        <p class="edu__uni" id="eduUni"></p>
+        <p class="edu__period" id="eduPeriod"></p>
+        <ul class="edu__degrees" id="eduDegrees"></ul>
+        <div class="edu__extra">
+          <p class="skills__subhead" id="eduExtraLabel" style="margin:0;">additional education</p>
+          <ul id="eduExtraList"></ul>
+        </div>
+        <div class="langhobby">
+          <div>
+            <h4 id="languagesLabel">languages</h4>
+            <ul id="languagesList"></ul>
+          </div>
+          <div>
+            <h4 id="hobbiesLabel">hobbies</h4>
+            <ul id="hobbiesList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacts-section">
+    <h2 class="section__title" id="contactsTitle">Contacts</h2>
+    <div class="unit">
+      <div class="unit__head">
+        <span class="unit__name"><span class="dot" aria-hidden="true"></span> <span id="contactsUnitName">contacts.service</span></span>
+        <span class="unit__status" id="contactsStatus">● active (loaded)</span>
+      </div>
+      <div class="unit__body">
+        <div class="contactgrid" id="contactGrid"></div>
+        <p class="botnote" id="botNote"># email / phone are decoded client-side on click — not present as plain text in the page source.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer shell">
+  <span id="uptimeLine"></span>
+  <span id="builtWithLine"></span>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
