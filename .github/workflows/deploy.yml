@@ -1,39 +1,40 @@
 name: Deploy CV Site
 
-run-name: Deploy CV Site (${{ github.event.inputs.environment || 'production' }})
-
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'site/**'
-      - '.github/workflows/deploy.yml'
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Target GitHub environment (holds AWS creds + vars.BUCKET / vars.CLOUDFRONT_DISTRIBUTION_ID)'
+        description: 'Target environment'
         required: true
         default: 'production'
         type: choice
         options:
           - production
 
+run-name: "Deploy to ${{ inputs.environment }} by @${{ github.actor }}"
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment || 'production' }}
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # No bundler here — the site is plain HTML/CSS/JS + JSON content files,
-      # there's nothing to compile. "Build" just means validate before we ship it.
-      - name: Validate content JSON
+      - name: Build site
         run: |
+          set -euo pipefail
+          echo "No bundler here — the site is plain HTML/CSS/JS + JSON content files."
+          echo "Build step = validate the content before it ships."
+
           for f in site/content/*.json; do
             echo "checking $f"
             python3 -m json.tool "$f" > /dev/null
           done
+
+          # Basic sanity: make sure the entry point and both language files exist
+          test -f site/index.html
+          test -f site/content/content.en.json
+          test -f site/content/content.ua.json
 
       - name: Upload site artifact
         uses: actions/upload-artifact@v4
@@ -42,13 +43,10 @@ jobs:
           path: site/
           retention-days: 1
 
-  # ============ DEPLOY (S3 + CloudFront) ============
-  # Infra (S3 bucket, CloudFront distribution) is managed by `tofu apply` run
-  # locally — this job only ships content into resources that already exist.
-  deploy_production:
+  deploy:
     runs-on: ubuntu-latest
     needs: build
-    environment: ${{ github.event.inputs.environment || 'production' }}
+    environment: ${{ inputs.environment }}
     steps:
       - name: Download site artifact
         uses: actions/download-artifact@v4
@@ -63,23 +61,19 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      # index.html is uploaded separately with a short cache lifetime so viewers
-      # always get the latest shell; everything else (css/js/json) can be cached
-      # hard since filenames don't change — CloudFront invalidation below covers
-      # the case where content did change without a filename change.
       - name: Sync static assets to S3
         run: |
-          aws s3 sync site/ s3://${{ vars.BUCKET }} \
+          aws s3 sync ./site s3://${{ vars.S3_BUCKET }} \
             --delete \
             --exclude "index.html" \
             --cache-control "public,max-age=31536000,immutable"
 
       - name: Upload index.html
         run: |
-          aws s3 cp site/index.html s3://${{ vars.BUCKET }}/index.html \
+          aws s3 cp ./site/index.html s3://${{ vars.S3_BUCKET }}/index.html \
             --cache-control "public,max-age=60,must-revalidate"
 
-      - name: Invalidate CloudFront cache
+      - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} \
