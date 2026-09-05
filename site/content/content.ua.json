@@ -17,6 +17,7 @@
   },
   "contacts": {
     "unit": "contacts.service",
+    "telegram_b64": "QGFsZXhfdHltb3NoZW5rb19kZXZvcHM=",
     "email_b64": "by5zLnR5bW9zaGVua28xOTk5QGdtYWlsLmNvbQ==",
     "phone_b64": "KzM4IDA5OCA2MjQgOTQgMjU=",
     "linkedin": "https://linkedin.com/in/oleksandr-tymoshenko-devops",

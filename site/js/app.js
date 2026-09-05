@@ -20,12 +20,15 @@
       botNote: '# email / phone are decoded client-side on click — not present as plain text in the page source.',
       revealEmail: 'reveal email',
       revealPhone: 'reveal phone',
+      revealTelegram: 'reveal telegram',
+      preferredContact: 'preferred contact method',
       copied: 'copied',
       linkedin: 'LinkedIn',
       github: 'GitHub',
       salesforce: 'Salesforce Trailhead',
       email: 'email',
       phone: 'phone',
+      telegram: 'telegram',
       uptimePrefix: 'career.uptime:',
       yearsSuffix: 'yrs'
     },
@@ -44,12 +47,15 @@
       botNote: '# email і телефон декодуються на стороні браузера по кліку — у вихідному коді сторінки їх немає у відкритому вигляді.',
       revealEmail: 'показати email',
       revealPhone: 'показати телефон',
+      revealTelegram: 'показати telegram',
+      preferredContact: 'бажаний спосіб зв\u2019язку',
       copied: 'скопійовано',
       linkedin: 'LinkedIn',
       github: 'GitHub',
       salesforce: 'Salesforce Trailhead',
       email: 'email',
       phone: 'телефон',
+      telegram: 'telegram',
       uptimePrefix: 'career.uptime:',
       yearsSuffix: 'р.'
     }
@@ -248,7 +254,14 @@
     data.hobbies.forEach((h) => hobbies.appendChild(el('li', { text: h })));
   }
 
-  function makeRevealRow(label, decodedValue, buttonLabel, ui, kind) {
+  function buildContactHref(kind, decodedValue) {
+    if (kind === 'email') return `mailto:${decodedValue}`;
+    if (kind === 'tel') return `tel:${decodedValue.replace(/\s+/g, '')}`;
+    if (kind === 'telegram') return `https://t.me/${decodedValue.replace(/^@/, '')}`;
+    return '#';
+  }
+
+  function makeRevealRow(label, decodedValue, buttonLabel, ui, kind, note) {
     const row = el('div', { class: 'contactrow' });
     row.appendChild(el('span', { class: 'contactrow__label mono', text: label }));
 
@@ -260,7 +273,8 @@
       const link = el('a', {
         text: decodedValue,
         attrs: {
-          href: kind === 'email' ? `mailto:${decodedValue}` : `tel:${decodedValue.replace(/\s+/g, '')}`
+          href: buildContactHref(kind, decodedValue),
+          ...(kind === 'telegram' ? { target: '_blank', rel: 'noopener' } : {})
         }
       });
       valueWrap.appendChild(link);
@@ -275,6 +289,10 @@
         });
       });
       valueWrap.appendChild(copyBtn);
+
+      if (note) {
+        valueWrap.appendChild(el('span', { class: 'copyhint', text: note }));
+      }
     }, { once: true });
 
     valueWrap.appendChild(btn);
@@ -291,6 +309,7 @@
     const grid = document.getElementById('contactGrid');
     grid.innerHTML = '';
 
+    grid.appendChild(makeRevealRow(ui.telegram, b64decode(data.contacts.telegram_b64), ui.revealTelegram, ui, 'telegram', ui.preferredContact));
     grid.appendChild(makeRevealRow(ui.email, b64decode(data.contacts.email_b64), ui.revealEmail, ui, 'email'));
     grid.appendChild(makeRevealRow(ui.phone, b64decode(data.contacts.phone_b64), ui.revealPhone, ui, 'tel'));
 
