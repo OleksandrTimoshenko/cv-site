@@ -21,7 +21,8 @@
 
   --radius: 6px;
   --shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-  --max-width: 880px;
+  --max-width: 980px;
+  --grid-dot: rgba(230, 234, 240, 0.06);
 
   color-scheme: dark;
 }
@@ -42,6 +43,7 @@
   --red: #C4362E;
 
   --shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  --grid-dot: rgba(26, 31, 39, 0.05);
   color-scheme: light;
 }
 
@@ -63,12 +65,16 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a { color: var(--cyan); text-decoration: none; }
@@ -89,7 +95,7 @@ a:hover { text-decoration: underline; }
 .shell {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* ============================================================
