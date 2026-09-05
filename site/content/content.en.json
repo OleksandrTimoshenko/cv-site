@@ -13,7 +13,7 @@
   },
   "summary": {
     "unit": "summary.service",
-    "text": "DevOps and CI/CD engineer with hands-on experience in fintech, e-commerce, and blockchain infrastructure. Specialized in deploying, configuring, and maintaining high-load production environments. Proven ability to design CI/CD pipelines and monitoring systems that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering scalable, fault-tolerant solutions that support business growth, operational stability, and fast product delivery."
+    "text": "DevOps and CI/CD engineer with hands-on experience in fintech, e-commerce, and blockchain infrastructure. Specialized in deploying, configuring, and maintaining high-load production environments. Skilled in designing CI/CD pipelines and monitoring systems that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering scalable, fault-tolerant solutions that support business growth, operational stability, and fast product delivery."
   },
   "contacts": {
     "unit": "contacts.service",
@@ -42,15 +42,18 @@
       "role": "DevOps Engineer",
       "company": "Umber",
       "tag": "Fintech",
-      "period": "March 2026 — Present",
+      "period": "Mar 2026 — Present",
       "status": "active",
       "log": [
         "Built reusable Terraform/OpenTofu IaC modules that cut new template-project setup time from a full working day down to 1–2 hours",
-        "Designed and maintain the company VPN for secure access to internal resources and servers (Tailscale + self-hosted Headscale)",
+        "Designed and maintain the company VPN for secure access to internal resources and servers (Tailscale + self-hosted Headscale); for AWS RDS access — since RDS instances can't run a Tailscale client directly — also set up HAProxy gateway servers",
+        "Set up and maintained self-hosted CI/CD runner infrastructure (dedicated unit-test runners, containerized execution environment)",
+        "Built an infrastructure monitoring system on AWS SNS, Lambda, CloudWatch Alarms, and EventBridge, then scaled it across 20+ projects with OpenTofu",
         "Support an AWS account spanning 20+ projects",
         "Designed modern infrastructure for new projects: ECS on EC2 with service and instance autoscaling, inter-service communication via AWS Cloud Map",
         "Migrated backend microservices from Fargate to ECS on EC2 for cost optimization, and frontend microservices from Fargate to Cloudflare + S3",
-        "Set up PostgreSQL data replication with Debezium and self-hosted GitHub Actions runners for CI"
+        "Set up PostgreSQL data replication with Debezium",
+        "Optimized AWS RDS PostgreSQL performance: worked with the team to add the indexes needed for faster queries, and improved disk performance by raising the IOPS limit"
       ]
     },
     {
@@ -59,6 +62,7 @@
       "period": "Sep 2024 — Jan 2026",
       "status": "exited",
       "log": [
+        "Deployed, updated, supported, and monitored a self-hosted k3s cluster for the Solana restaking project",
         "Operated and optimized high-load blockchain RPC nodes (Solana RPC, OP stack, Cosmos-like)",
         "Reduced RPC cluster costs by 65% through infrastructure optimization, traffic distribution, and proper resource sizing while maintaining high availability"
       ]
@@ -70,9 +74,9 @@
       "status": "exited",
       "log": [
         "Administered the AWS account of a large enterprise project (20+ services), maintaining high availability, security, and cost optimization",
-        "Migrated part of the project from Heroku to AWS; redesigned infrastructure and optimized database configuration for a 40% cost reduction",
         "Optimized CI/CD pipelines: 10–50% reduction in execution time, 40% decrease in failure rate",
-        "Increased deployment frequency from 1–2/week to 3–5/day by letting developers update variables directly through CircleCI, removing manual Terraform dependency"
+        "Increased deployment frequency from 1–2/week to 3–5/day by letting developers update variables directly through CircleCI, removing manual Terraform dependency",
+        "Evaluated, selected, and deployed AI tooling at the company level to enhance automation and decision-making"
       ]
     },
     {
@@ -82,7 +86,7 @@
       "status": "exited",
       "log": [
         "Drove company-wide DevOps integration and culture, improving collaboration and accelerating delivery times",
-        "Evaluated, selected, and deployed AI tooling at the company level to enhance automation and decision-making"
+        "Migrated part of the project from Heroku to AWS; redesigned infrastructure and optimized database configuration for a 40% cost reduction"
       ]
     }
   ],
@@ -91,14 +95,15 @@
     "hard": [
       "Linux systems",
       "AWS Cloud (20+ services, account administration)",
-      "CI/CD: Jenkins, CircleCI, GitLab CI, GitHub CI",
-      "IaC: Terraform, Ansible",
+      "CI/CD: GitHub CI, Jenkins, CircleCI, GitLab CI",
+      "Terraform (HCL): OpenTofu, Terraform",
+      "Ansible",
       "Containers: Docker, K8s/K3s, Vagrant",
       "Monitoring: Zabbix, CloudWatch, Prometheus & Grafana, EFK stack, NewRelic",
       "Blockchain RPC nodes: Solana, OP stack, Cosmos-like",
       "App stacks: Django, Node.js, Ruby on Rails, Magento 2",
       "Jenkins pipelines & Groovy libraries",
-      "HAProxy, Nginx, load balancing",
+      "HAProxy, Nginx, Caddy, load balancing",
       "SonarQube, SFDX code analyzer",
       "Capacity planning & performance tuning (CPU/RAM/LVM/RAID)",
       "Load testing: WebPageTest, Chainbench",
@@ -107,7 +112,11 @@
       "Redis, AWS ElastiCache",
       "Let's Encrypt / Certbot",
       "ML model deployment, OpenAI API integration",
-      "Salesforce CI/CD pipelines"
+      "Salesforce CI/CD pipelines",
+      "Modern software development practices (DevOps, Agile, Waterfall)",
+      "Scrum methodology and direct client interaction (brainstorming, planning migrations, upgrades, deploys)",
+      "Service Level Management KPIs aligned with OKRs for reliability and business goals",
+      "Modern security practices"
     ],
     "soft": [
       "Effective communication with technical and non-technical stakeholders",
