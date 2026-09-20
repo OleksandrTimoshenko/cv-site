@@ -13,7 +13,7 @@
   },
   "summary": {
     "unit": "summary.service",
-    "text": "DevOps and CI/CD engineer with hands-on experience in fintech, e-commerce, and blockchain infrastructure. Specialized in deploying, configuring, and maintaining high-load production environments. Skilled in designing CI/CD pipelines and monitoring systems that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering scalable, fault-tolerant solutions that support business growth, operational stability, and fast product delivery."
+    "text": "DevOps and CI/CD engineer with hands-on experience in fintech, e-commerce, and blockchain infrastructure. Specialized in deploying, configuring, and maintaining <strong>high-load production environments</strong>. Skilled in designing <strong>CI/CD pipelines and monitoring systems</strong> that improve development efficiency, code quality, and infrastructure reliability. Focused on delivering <strong>scalable, fault-tolerant solutions</strong> that support business growth, operational stability, and fast product delivery."
   },
   "contacts": {
     "unit": "contacts.service",
@@ -46,15 +46,15 @@
       "period": "Mar 2026 — Present",
       "status": "active",
       "log": [
-        "Built reusable Terraform/OpenTofu IaC modules that cut new template-project setup time from a full working day down to 1–2 hours",
-        "Designed and maintain the company VPN for secure access to internal resources and servers (Tailscale + self-hosted Headscale); for AWS RDS access — since RDS instances can't run a Tailscale client directly — also set up HAProxy gateway servers",
-        "Set up and maintained self-hosted CI/CD runner infrastructure (dedicated unit-test runners, containerized execution environment)",
-        "Built an infrastructure monitoring system on AWS SNS, Lambda, CloudWatch Alarms, and EventBridge, then scaled it across 20+ projects with OpenTofu",
-        "Support an AWS account spanning 20+ projects",
-        "Designed modern infrastructure for new projects: ECS on EC2 with service and instance autoscaling, inter-service communication via AWS Cloud Map",
-        "Migrated backend microservices from Fargate to ECS on EC2 for cost optimization, and frontend microservices from Fargate to Cloudflare + S3",
-        "Set up PostgreSQL data replication with Debezium",
-        "Optimized AWS RDS PostgreSQL performance: worked with the team to add the indexes needed for faster queries, and improved disk performance by raising the IOPS limit"
+        "Built reusable Terraform/OpenTofu IaC modules that cut new template-project setup time from <strong>a full working day</strong> down to <strong>1–2 hours</strong>",
+        "Designed and maintain the company VPN for secure access to internal resources and servers (<strong>Tailscale</strong> + self-hosted <strong>Headscale</strong>); for AWS RDS access — since RDS instances can't run a Tailscale client directly — also set up <strong>HAProxy</strong> gateway servers",
+        "Set up and maintained <strong>self-hosted CI/CD runner infrastructure</strong> (dedicated unit-test runners, containerized execution environment)",
+        "Built an infrastructure monitoring system on <strong>AWS SNS, Lambda, CloudWatch Alarms, and EventBridge</strong>, then scaled it across <strong>20+ projects</strong> with OpenTofu",
+        "Support an AWS account spanning <strong>20+ projects</strong>",
+        "Designed modern infrastructure for new projects: <strong>ECS on EC2</strong> with service and instance autoscaling, inter-service communication via AWS Cloud Map",
+        "Migrated backend microservices from Fargate to <strong>ECS on EC2</strong> for cost optimization, and frontend microservices from Fargate to <strong>Cloudflare + S3</strong>",
+        "Set up PostgreSQL data replication with <strong>Debezium</strong>",
+        "Optimized AWS RDS PostgreSQL performance: worked with the team to add the indexes needed for faster queries, and improved disk performance by raising the <strong>IOPS limit</strong>"
       ]
     },
     {
@@ -63,9 +63,9 @@
       "period": "Sep 2024 — Jan 2026",
       "status": "exited",
       "log": [
-        "Deployed, updated, supported, and monitored a self-hosted k3s cluster for the Solana restaking project",
-        "Operated and optimized high-load blockchain RPC nodes (Solana RPC, OP stack, Cosmos-like)",
-        "Reduced RPC cluster costs by 65% through infrastructure optimization, traffic distribution, and proper resource sizing while maintaining high availability"
+        "Deployed, updated, supported, and monitored a self-hosted cluster for the <strong>Solana restaking</strong> project",
+        "Operated and optimized high-load blockchain RPC nodes (<strong>Solana RPC, OP stack, Cosmos-like</strong>)",
+        "Reduced RPC cluster costs by <strong>65%</strong> through infrastructure optimization, traffic distribution, and proper resource sizing while maintaining high availability"
       ]
     },
     {
@@ -74,10 +74,10 @@
       "period": "Jun 2022 — Aug 2024",
       "status": "exited",
       "log": [
-        "Administered the AWS account of a large enterprise project (20+ services), maintaining high availability, security, and cost optimization",
-        "Optimized CI/CD pipelines: 10–50% reduction in execution time, 40% decrease in failure rate",
-        "Increased deployment frequency from 1–2/week to 3–5/day by letting developers update variables directly through CircleCI, removing manual Terraform dependency",
-        "Evaluated, selected, and deployed AI tooling at the company level to enhance automation and decision-making"
+        "Administered the AWS account of a large enterprise project (<strong>20+ services</strong>), maintaining high availability, security, and cost optimization",
+        "Optimized CI/CD pipelines: <strong>10–50%</strong> reduction in execution time, <strong>40%</strong> decrease in failure rate",
+        "Increased deployment frequency from <strong>1–2/week to 3–5/day</strong> by letting developers update variables directly through CircleCI, removing manual Terraform dependency",
+        "Evaluated, selected, and deployed <strong>AI tooling</strong> at the company level to enhance automation and decision-making"
       ]
     },
     {
@@ -87,7 +87,7 @@
       "status": "exited",
       "log": [
         "Drove company-wide DevOps integration and culture, improving collaboration and accelerating delivery times",
-        "Migrated part of the project from Heroku to AWS; redesigned infrastructure and optimized database configuration for a 40% cost reduction"
+        "Migrated part of the project from <strong>Heroku to AWS</strong>; redesigned infrastructure and optimized database configuration for a <strong>40% cost reduction</strong>"
       ]
     }
   ],

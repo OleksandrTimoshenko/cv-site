@@ -321,6 +321,12 @@ a:hover { text-decoration: underline; }
 /* Summary */
 .summary__text { margin: 0; color: var(--text-dim); font-size: 16px; }
 
+.summary__text strong,
+.exp__log li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* Experience */
 .exp {
   display: flex;
@@ -438,6 +444,14 @@ a:hover { text-decoration: underline; }
   margin: 16px 0 0;
   padding-top: 16px;
   border-top: 1px dashed var(--border);
+}
+
+#eduExtraLabel {
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
 }
 
 .edu__extra ul {

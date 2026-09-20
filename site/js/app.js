@@ -13,7 +13,7 @@
       hardSkillsLabel: 'hard skills',
       softSkillsLabel: 'soft skills',
       educationTitle: 'Education',
-      eduExtraLabel: 'additional education',
+      eduExtraLabel: 'Additional education',
       languagesLabel: 'languages',
       hobbiesLabel: 'hobbies',
       contactsTitle: 'Contacts',
@@ -40,7 +40,7 @@
       hardSkillsLabel: 'технічні навички',
       softSkillsLabel: "м'які навички",
       educationTitle: 'Освіта',
-      eduExtraLabel: 'додаткова освіта',
+      eduExtraLabel: 'Додаткова освіта',
       languagesLabel: 'мови',
       hobbiesLabel: 'хобі',
       contactsTitle: 'Контакти',
@@ -158,7 +158,7 @@
     document.getElementById('summaryUnitLabel').textContent = data.summary.unit;
     document.getElementById('summaryUnitName').textContent = data.summary.unit;
     document.getElementById('summaryStatus').textContent = ui.summaryStatus;
-    document.getElementById('summaryText').textContent = data.summary.text;
+    document.getElementById('summaryText').innerHTML = data.summary.text;
   }
 
   function renderExperience(data, ui) {
@@ -196,7 +196,7 @@
       exp.appendChild(row);
 
       const log = el('ul', { class: 'exp__log' });
-      job.log.forEach((entry) => log.appendChild(el('li', { text: entry })));
+      job.log.forEach((entry) => log.appendChild(el('li', { html: entry })));
       exp.appendChild(log);
 
       body.appendChild(exp);
